@@ -1,0 +1,26 @@
+.main-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 482px;
+  }
+  
+  .main-error {
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+  }
+  
+  .main-error .bottom {
+    font-weight: normal;
+    font-size: 30px;
+  }
+
+  .buttons{
+    width: 300px;
+    background-color: green;
+    border-radius: 10px;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+  }

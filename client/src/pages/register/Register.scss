@@ -1,0 +1,54 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.choose {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  
+  .top-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 40%;
+    margin-bottom: 10px;
+    
+    .button {
+        width: 50%;
+        height: 100%;
+        margin-right: 5px;
+        background-color: #e0e0e0;
+        color: #000;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+  
+    .button.selected {
+        background-color: #2196f3;
+        color: #fff;
+    }
+}
+  
+  .bottom-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 10%;
+  
+    .continue-button {
+        width: 100%;
+        height: 100%;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+}
+}

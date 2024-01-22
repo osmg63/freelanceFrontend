@@ -1,0 +1,44 @@
+.orders{
+    display: flex;
+    justify-content: center;
+    min-height: 482px;
+    .orders-container{
+        width: 1400px;
+        padding: 10px 0px;
+
+        .orders-title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        table{
+            width: 100%;
+
+            tr{
+                height: 50px;
+                
+                th{
+                    text-align: left;
+                }                
+                td{
+                    .img{
+                        width: 50px;
+                        height: 25px;
+                        object-fit: cover;
+                    }
+                }
+                    .contact{
+                        width: 20px;
+                        height: 20px;
+                        cursor: pointer;
+                    }
+
+                &:nth-child(even){
+                    background-color: #1dbf730f;
+                }
+            }
+        }
+    }
+}

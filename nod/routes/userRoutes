@@ -1,0 +1,51 @@
+const express = require('express');
+const cors = require('cors');
+const router = express.Router();
+const userService = require('../service/userService');
+
+const corsOptions = {
+  origin: 'http://localhost:3000', // İzin verilen origin (kök domain)
+  methods: 'GET,POST', // İzin verilen HTTP metodları
+  credentials: true, // Tarayıcı çerezleriyle ilgili izin
+  optionsSuccessStatus: 204, // OPTIONS isteği başarılı olduysa dönülecek HTTP durumu
+};
+
+router.use(cors(corsOptions));
+
+router.get('/:user_name', async (req, res) => {
+  const user_name = req.params.user_name;
+
+  try {
+    const user = await userService.getUserByUsername(user_name);
+    if (user) {
+      res.json(user);
+    } else {
+      res.status(404).json({ error: 'Kullanıcı bulunamadı.' });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Sunucu hatası.' });
+  }
+  router.post('/add', async (req, res) => {
+    const newUserDetails = req.body; // POST isteğinin gövdesinden kullanıcı bilgilerini al
+  
+    try {
+      const newUser = await userService.addUser(newUserDetails);
+      res.status(201).json(newUser); // 201 Created durumu ve oluşturulan kullanıcıyı geri döndür
+    } catch (error) {
+      console.error('Kullanıcı eklenirken bir hata oluştu:', error);
+      res.status(500).json({ error: 'Kullanıcı eklenirken bir hata oluştu.' });
+    }
+  });
+});
+router.get('/k/all', async (req, res) => {
+    try {
+      const allUsers = await userService.getAllUsers();
+      res.json(allUsers);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Sunucu hatası.' });
+    }
+  });
+  
+module.exports = router;

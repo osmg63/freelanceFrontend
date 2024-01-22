@@ -1,0 +1,69 @@
+.card-text{
+font-size: 20px;
+font-weight: normal;
+}
+
+.product-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    text-align:left;
+    font-family: arial;
+  }
+
+  .product-title {
+    font-size: 16px; /* İstenilen boyutu buraya yazın */
+    font-weight: bold;
+    padding-left: 10px; /* Sol padding değeri */
+    padding-right: 10px; /* Sağ padding değeri */
+  }
+
+  .product-body{
+    margin-left: 5px;
+    font-size: 14px; 
+    padding-left: 10px; /* Sol padding değeri */
+    padding-right: 10px; /* Sağ padding değeri */
+  }
+    .product-name {
+        display: flex;
+        align-items: center;
+        margin-top:12px;
+        margin-left: 5px;
+        margin-bottom: 5px;
+      }
+      
+      .product-name span {
+        margin-left: 12px; /* İstenilen boşluk için */
+      }
+      
+  
+  .profil-photo{
+    width: 25px;
+    height: 25px;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+    padding-right: 10px; /* Sağ padding değeri */
+    padding-bottom: 10px;
+  }
+  
+  .product-card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .product-card button:hover {
+    opacity: 0.7;
+  }
+
+  .loggedInDiv{
+    min-height: 472px;
+  }
